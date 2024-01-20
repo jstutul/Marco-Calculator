@@ -144,6 +144,7 @@ function setError(msg) {
     newDiv.innerHTML = msg;
     var results = "results"; // ID of the target element
     var errortxt = document.getElementById(results);
+    errortxt.innerHTML = "";
     errortxt.appendChild(newDiv);
     errortxt.scrollIntoView({ behavior: "smooth", block: "start" });
 }
