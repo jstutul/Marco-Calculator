@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Macro Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+
+<body>
+    <div class="macro-calculator">
+
+        <div class="main-content">
+            <div class="heading">
+                <h2 class="tit">Macro Calculator</h2>
+                <p class="dit">
+                    To calculate your daily calorie and macro goals, simply fill out the information on my calculator
+                    below! Further details on calculating your macros are available in my nutrition guide.
+                </p>
+            </div>
+            <div class="content">
+                <form id="macroCalculatorForm">
+                    <div class="form-box">
+                        <label>BIOLOGICAL SEX</label>
+                        <div class="button-box">
+                            <div class="btn"></div>
+                            <button type="button" class="btnSex toggle-btn selected" data-val="male"
+                                onclick="leftClick(this)">Male</button>
+                            <button type="button" class="btnSex toggle-btn" data-val="female"
+                                onclick="rightClick(this)">Female</button>
+                        </div>
+                    </div>
+                    <div class="form-box">
+                        <label for="age">Age</label>
+                        <div class="field-container">
+                            <input type="number" class="field-input" id="txtage" value="0">
+                        </div>
+                    </div>
+                    <div class="row-container">
+                        <div class="form-box">
+                            <label>Weight Unit</label>
+                            <div class="button-box">
+                                <div class="btn"></div>
+                                <button type="button" class="btnW toggle-btn selected" data-val="lb"
+                                    onclick="leftClick(this)">LB</button>
+                                <button type="button" class="btnW toggle-btn" data-val="kg"
+                                    onclick="rightClick(this)">KG</button>
+                            </div>
+                        </div>
+                        <div class="form-box">
+                            <label for="weight">Weight</label>
+                            <div class="field-container">
+                                <input type="number" class="field-input" id="txtweight" value="0">
+                            </div>
+                        </div>
+                        <div class="form-box">
+                            <label for="height">Height (in cm)</label>
+                            <div class="field-container">
+                                <input type="number" class="field-input" id="txtheight" value="0">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-box">
+                        <label for="">EXERCISE LEVEL</label>
+                        <fieldset class="goal"><label>
+                                <input type="radio" name="excercise" checked="" value="s">
+                                <span class="">Sedentary <em>(no
+                                        exercise)</em></span></label><label><input type="radio" name="excercise"
+                                    value="m"><span class="">Moderate <em>(3x-4x per
+                                        week)</em></span></label><label><input type="radio" name="excercise"
+                                    value="l"><span class="">Active <em>(5x+ per
+                                        week)</em></span></label>
+                        </fieldset>
+                    </div>
+                    <div class="form-box">
+                        <label for="">Your Primary Goal</label>
+                        <fieldset class="goal"><label>
+                                <input type="radio" name="goal" checked="" value="lw">
+                                <span class="">Lose Weight</span></label><label><input type="radio" name="goal"
+                                    value="gw"><span class="">Gain</span></label><label><input type="radio" name="goal"
+                                    value="rp"><span class="">Recomp</span></label>
+                        </fieldset>
+                    </div>
+                    <div class="form-box">
+                        <label>Currently Breastfeeding?</label>
+                        <div class="button-box">
+                            <div class="btn"></div>
+                            <button type="button" class="btnCB toggle-btn selected" data-val="yes"
+                                onclick="leftClick(this)">Yes</button>
+                            <button type="button" class="btnCB toggle-btn" data-val="no"
+                                onclick="rightClick(this)">No</button>
+                        </div>
+                    </div>
+                    <button type="button" class="btnSubmit" id="btnSubmit">Calculate</button>
+                </form>
+            </div>
+            <div id="results">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

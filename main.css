@@ -1,0 +1,184 @@
+:root {
+    --switches-bg-color: #88dbdf;
+    --switches-label-color: white;
+    --switch-bg-color: white;
+    --switch-text-color: #88dbdf;
+}
+body {
+    font-family: Arial, sans-serif;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.macro-calculator {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 10px 0px;
+    overflow: hidden;
+}
+
+.macro-calculator .main-content {
+    width: 80%;
+    padding: 10px;
+}
+.macro-calculator label {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.form-box {
+    width: 300px;
+}
+.form-box .field-input {
+    height: 26px;
+    width: 210px;
+    border-radius: 30px;
+    border: 2px solid #e67e22;
+    margin: 10px 0px;
+    font-size: 16px;
+    padding-left: 10px; /* Initial padding */
+    transition: padding-left 0.3s ease;
+}
+.form-box .field-input:focus {
+    border: 2px solid #e67e22;
+}
+.button-box {
+    display: flex;
+    justify-content: space-between;
+    width: 210px;
+    margin: 10px 0px;
+    position: relative;
+    border-radius: 30px;
+    background: #fff;
+}
+.toggle-radio {
+    display: none;
+}
+
+.toggle-btn {
+    padding: 10px 40px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    text-align: center;
+}
+
+.btn {
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: #e67e22;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.macro-calculator form fieldset {
+    border: 0;
+    display: block;
+    padding: 0;
+}
+.macro-calculator form legend {
+    display: block;
+    font-family: Oswald;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+.macro-calculator form .goal label {
+    display: block;
+    margin: 0 0 1rem;
+    width: 20rem;
+}
+.macro-calculator form .goal input {
+    position: absolute;
+    opacity: 0.01;
+    width: 0;
+    height: 0;
+    z-index: 0;
+}
+.macro-calculator form label input {
+    display: inline-block;
+}
+.macro-calculator form input {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.macro-calculator form .goal input:checked + span {
+    background: #fff;
+    color: #676b6e;
+}
+.macro-calculator form .goal span {
+    margin-top: 10px;
+    background: #e67e22;
+    border: 2px solid #e67e22;
+    border-radius: 2rem;
+    color: #fff;
+    display: block;
+    font-family: Oswald;
+    font-weight: 600;
+    height: 2rem;
+    line-height: 2rem;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    z-index: 3;
+}
+.button-box .selected {
+    font-weight: 600;
+    color: #fff;
+}
+
+.btnSubmit {
+    background-color: #e67e22;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    width: 151px;
+    color: #fff;
+    font-weight: 800;
+    margin-top: 40px;
+    cursor: pointer;
+}
+.row-container {
+    display: flex;
+}
+@media (max-width: 767px) {
+    .row-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+#results .summery {
+    border: 1px solid #e67e22;
+    margin-top: 10px;
+    padding: 10px;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        padding: 8px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    li:last-child {
+        border-bottom: none;
+    }
+    li:hover {
+        background-color: #e67e22;
+        color: #fff;
+    }
+}
